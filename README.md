@@ -1,4 +1,6 @@
-# dumi-demo
+# codenotes
+
+## Use dumi for practice
 
 A static site base on [dumi](https://d.umijs.org).
 

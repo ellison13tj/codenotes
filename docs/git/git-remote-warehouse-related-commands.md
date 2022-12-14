@@ -1,7 +1,7 @@
 <!--
  * @Author: ellison13tj@gmail.com
  * @Date: 2022-12-14 17:04:44
- * @LastEditTime: 2022-12-14 21:19:39
+ * @LastEditTime: 2022-12-14 21:33:39
  * @LastEditors: ellison13tj@gmail.com
  * @FilePath: /docs/git/git-remote-warehouse-related-commands.md
  * @Description:
@@ -29,45 +29,45 @@ chcp 65001
 > - Key 为 id_rsa.pub 里的 key
 > - 点击 Add SSH key
 
-```sh
--- 验证是否成功
+```bash
+## 验证是否成功
 ssh -T git@github.com
 
--- 输出以下表示成功
+## 输出以下表示成功
 Hi WongJay! You’ve successfully authenticated, but GitHub does not provide shell access.
 
--- 第一次添加远程仓库地址
+## 第一次添加远程仓库地址
 git remote add origin git@git.zhlh6.cn:nigthlife/test.git
 
--- 添加远程仓库地址
+## 添加远程仓库地址
 git remote set-url --add origin git@git.zhlh6.cn:nigthlife/test.git
 
--- 删除
+## 删除
 git remote set-url --delete git@git.zhlh6.cn:nigthlife/test.git
 
--- 推送代码到远程
+## 推送代码到远程
 git push <远程主机名> <本地分支名>:<远程分支名>
 
 origin: 远程主机名
 master: 本地分支名
--- 将本地的master分支推送到origin主机的master分支，
--- 如果远程master分支不存在则会被创建
+## 将本地的master分支推送到origin主机的master分支，
+## 如果远程master分支不存在则会被创建
 git push origin master
 
--- 强制推送
+## 强制推送
 git push -f origin master
 
--- 拉取远程仓库代码
+## 拉取远程仓库代码
 git pull <远程主机名> <本地分支名>:<远程分支名>
 origin: 远程主机名
 master: 远程分支名
--- 将远程origin主机中的master分支中的代码拉取到本地master分支
--- 如果本地master分支不存在则会被创建
+## 将远程origin主机中的master分支中的代码拉取到本地master分支
+## 如果本地master分支不存在则会被创建
 git pull origin master
 或
 git pull origin master:branchName
 
--- 显示以下表示成功
+## 显示以下表示成功
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 273 bytes | 91.00 KiB/s, done.
@@ -90,15 +90,15 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 ## 其他命令
 
 ```bash
--- 查看当前有哪些远程仓库与实际链接地址
+## 查看当前有哪些远程仓库与实际链接地址
 git remote -v
 
--- 查看当前分支所属
+## 查看当前分支所属
 git remote -vv
 
--- 删除远程仓库
+## 删除远程仓库
 git remote rm 远程仓库名
 
--- 将所有本地分支都推送到origin主机。
+## 将所有本地分支都推送到origin主机。
 git push --all origin
 ```
