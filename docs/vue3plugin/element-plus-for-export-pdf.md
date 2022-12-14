@@ -1,26 +1,29 @@
 <!--
  * @Author: ellison13tj@gmail.com
  * @Date: 2022-12-14 11:55:04
- * @LastEditTime: 2022-12-14 12:12:42
+ * @LastEditTime: 2022-12-14 17:45:00
  * @LastEditors: ellison13tj@gmail.com
  * @FilePath: /docs/vue3plugin/element-plus-for-export-pdf.md
  * @Description: 
 -->
 # 基于Element Plus 导出PDF文件
-  
+
 > 使用html2Canvas和JsPDF库，转化为图片后保存PDF。
-  
-1. 安装html2Canvas库
+
+1.安装html2Canvas库
+
 ```bash
 npm install html2canvas
 ```
-  
-2. 安装JsPDF库
+
+2.安装JsPDF库
+
 ```bash
 npm install jspdf
 ```
-  
-3. 封装成工具，例如取名htmlToPdf.js，后续使用时组件中引用即可
+
+3.封装成工具，例如取名htmlToPdf.js，后续使用时组件中引用即可
+
 ```javascript
 import html2Canvas from 'html2canvas'
 import JsPDF from 'jspdf'
@@ -57,14 +60,14 @@ const htmlToPdf = {
 export default htmlToPdf
 ```
 
-4. 在VUE组件中引用并使用封装的工具
-```javascript
-// 引用封装的工具
-import htmlToPdf from './htmlToPdf.js'
+4.在VUE组件中引用并使用封装的工具
 
-// 使用工具（绑定到XX事件或按钮上）
-exportPdf() {
-  htmlToPdf.getPdf('导出的PDF')
-}
-```
+  ```javascript
+  // 引用封装的工具
+  import htmlToPdf from './htmlToPdf.js'
 
+  // 使用工具（绑定到XX事件或按钮上）
+  exportPdf() {
+    htmlToPdf.getPdf('导出的PDF')
+  }
+    ```
